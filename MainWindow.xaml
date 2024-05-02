@@ -26,71 +26,129 @@
             <RowDefinition MinHeight="200"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <!-- 7 -->
-        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="8" Orientation="Horizontal" Background="Gray">
-            <Button>Файл</Button>
-            <Button>Правка</Button>
-        </StackPanel>
+        <!-- 7  -->
+        <Menu Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="8" Background="Gray">
+            <MenuItem Header="Файл">
+                <MenuItem>
+                    <MenuItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="C:/Junkyard/Иконки/smth.png"/>
+                            <ContentPresenter Content="Открыть"/>
+                        </StackPanel>
+                    </MenuItem.Header>
+                </MenuItem>
+                <MenuItem Header="Сохранить" Icon=""/>
+                <MenuItem Header="Выход"/>
+            </MenuItem>
+            <MenuItem Header="Правка">
+                <MenuItem Header="Копировать"/>
+                <MenuItem Header="Вырезать"/>
+                <MenuItem Header="Вставить"/>
+            </MenuItem>
+        </Menu>
         <!-- 6 -->
-        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="8" Orientation="Horizontal" Background="Gray">
-            <Button>Запустить</Button>
-        </StackPanel>
+        <Menu Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="8" Background="Gray">
+            <MenuItem>
+                <MenuItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:/Junkyard/Иконки/play.png"/>
+                        <ContentPresenter Content="Запустить"/>
+                    </StackPanel>
+                </MenuItem.Header>
+            </MenuItem>
+        </Menu>
         <!-- 8 -->
-        <TabControl Grid.Column="0" Grid.Row="2" Grid.RowSpan="6" Background="Gray" TabStripPlacement="Left">
+        <TabControl Grid.Column="0" Grid.Row="2" Grid.RowSpan="6" Grid.ColumnSpan="2" Background="Gray" TabStripPlacement="Left">
             <TabItem Background="LightGray" Header="Элементы">
                 <TabItem.LayoutTransform>
                     <RotateTransform Angle="-90"/>
                 </TabItem.LayoutTransform>
+                <!-- 3 -->
+                <ListBox Grid.Column="1" Grid.Row="2" Grid.RowSpan="6" Background="Gray">
+                    <ListBoxItem>элементы</ListBoxItem>
+                    <ListBoxItem>lorem</ListBoxItem>
+                    <ListBoxItem>lorem</ListBoxItem>
+                </ListBox>
             </TabItem>
             <TabItem Background="LightGray" Header="Не элементы">
                 <TabItem.LayoutTransform>
                     <RotateTransform Angle="-90"/>
                 </TabItem.LayoutTransform>
+                <!-- 3 -->
+                <ListBox Grid.Column="1" Grid.Row="2" Grid.RowSpan="6" Background="Gray">
+                    <ListBoxItem>не элементы</ListBoxItem>
+                    <ListBoxItem>lorem</ListBoxItem>
+                    <ListBoxItem>lorem</ListBoxItem>
+                </ListBox>
             </TabItem>
         </TabControl>
-        <!-- 3 -->
-        <ListBox Grid.Column="1" Grid.Row="2" Grid.RowSpan="6" Background="Gray">
-            <ListBoxItem>lorem</ListBoxItem>
-            <ListBoxItem>lorem</ListBoxItem>
-            <ListBoxItem>lorem</ListBoxItem>
-        </ListBox>
-        <GridSplitter Grid.Column="2" Grid.Row="2" Grid.RowSpan="6" Width="2" VerticalAlignment="Stretch" ShowsPreview="False"/>
+        <GridSplitter Grid.Column="2" Grid.Row="2" Grid.RowSpan="6" Width="3" ResizeBehavior="PreviousAndNext" VerticalAlignment="Stretch" ShowsPreview="False"/>
         <TabControl Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="Gray">
             <TabItem Background="LightGray" Header="Окно 1">
-                <StackPanel Orientation="Horizontal">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition MinWidth="100"/>
+                        <ColumnDefinition Width="3"/>
+                        <ColumnDefinition MinWidth="100"/>
+                    </Grid.ColumnDefinitions>
                     <!-- 1 -->
-                    <Button Background="Green" MinWidth="100" MinHeight="100">1</Button>
-                    <GridSplitter Grid.Column="4" Grid.Row="3" Width="2" VerticalAlignment="Stretch" ShowsPreview="False"/>
+                    <Button Grid.Column="0" Background="Green">1</Button>
+                    <GridSplitter Grid.Column="1" Width="3" VerticalAlignment="Stretch" ShowsPreview="False"/>
                     <!-- 2 -->
-                    <Button Background="SlateGray" MinWidth="100" MinHeight="100">2</Button>
-                </StackPanel>
+                    <Button Grid.Column="2" Background="SlateGray">2</Button>
+                </Grid>
             </TabItem>
             <TabItem Background="LightGray" Header="MainWindow.cs"/>
         </TabControl>
-        <GridSplitter Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Height="2" HorizontalAlignment="Stretch" ShowsPreview="False"/>
+        <GridSplitter Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" Height="3" ResizeBehavior="PreviousAndNext" HorizontalAlignment="Stretch" ShowsPreview="False"/>
         <!-- 4 -->
-        <ListBox Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="3" Background="Gray">
-            <ListBoxItem>Ошибка</ListBoxItem>
-            <ListBoxItem>Баг</ListBoxItem>
-            <ListBoxItem>Предупреждение</ListBoxItem>
-            <ListBoxItem>Неправильно!</ListBoxItem>
-        </ListBox>
-        <TabControl Grid.Column="3" Grid.Row="6" Grid.ColumnSpan="3" Background="Gray">
-            <TabItem Background="LightGray" Header="Вывод"/>
-            <TabItem Background="LightGray" Header="Ошибки"/>
-            <TabItem Background="LightGray" Header="Отладка"/>
+        <TabControl TabStripPlacement="Bottom" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="3" Grid.RowSpan="2" Background="Gray">
+            <TabItem Grid.Row="3" Background="LightGray" Header="Вывод">
+                <ListBox Background="gray">
+                    <ListBoxItem>
+                        то
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        да сё
+                    </ListBoxItem>
+                </ListBox>
+            </TabItem>
+            <TabItem Background="LightGray" Header="Ошибки">
+                <ListBox Background="gray">
+                    <ListBoxItem>
+                        уъу ошибка
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        куча ошибок
+                    </ListBoxItem>
+                </ListBox>
+            </TabItem>
+            <TabItem Background="LightGray" Header="Отладка">
+                <ListBox Background="gray">
+                    <ListBoxItem>
+                        делай что хочешь
+                    </ListBoxItem>
+                </ListBox>
+            </TabItem>
         </TabControl>
-        <GridSplitter Grid.Column="6" Grid.Row="2" Grid.RowSpan="6" Width="2" VerticalAlignment="Stretch" ShowsPreview="False"/>
+        <GridSplitter Grid.Column="6" Grid.Row="2" Grid.RowSpan="6" Width="3" ResizeBehavior="PreviousAndNext"  VerticalAlignment="Stretch" ShowsPreview="False"/>
         <!-- 5 -->
-        <ListBox Grid.Column="7" Grid.Row="2" Grid.RowSpan="5" Background="Gray">
-            <ListBoxItem Background="MediumPurple">Решение</ListBoxItem>
-            <ListBoxItem Background="LightBlue">Проект</ListBoxItem>
-            <ListBoxItem Background="LightGreen">Program.cs</ListBoxItem>
-            <ListBoxItem Background="White">readme</ListBoxItem>
-        </ListBox>
-        <TabControl Grid.Column="7" Grid.Row="6" Background="Gray">
-            <TabItem Background="LightGray" Header="Свойства"/>
-            <TabItem Background="LightGray" Header="Git"/>
+        <TabControl TabStripPlacement="Bottom" Grid.Column="7" Grid.Row="2" Grid.RowSpan="5" Background="Gray">
+            <TabItem Background="LightGray" Header="Свойства">
+                <ListBox Background="Gray">
+                    <ListBoxItem Background="MediumPurple">Решение</ListBoxItem>
+                    <ListBoxItem Background="LightBlue">Проект</ListBoxItem>
+                    <ListBoxItem Background="LightGreen">Program.cs</ListBoxItem>
+                    <ListBoxItem Background="White">readme</ListBoxItem>
+                </ListBox>
+            </TabItem>
+            <TabItem Background="LightGray" Header="Git">
+                <ListBox Background="Gray">
+                    <ListBoxItem Background="MediumPurple">Создать репозиторий</ListBoxItem>
+                    <ListBoxItem Background="LightBlue">Зафиксировать изменения</ListBoxItem>
+                    <ListBoxItem Background="LightGreen">галя отмена</ListBoxItem>
+                </ListBox>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
