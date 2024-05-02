@@ -29,13 +29,10 @@
         <!-- 7  -->
         <Menu Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="8" Background="Gray">
             <MenuItem Header="Файл">
-                <MenuItem>
-                    <MenuItem.Header>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="C:/Junkyard/Иконки/smth.png"/>
-                            <ContentPresenter Content="Открыть"/>
-                        </StackPanel>
-                    </MenuItem.Header>
+                <MenuItem Header="Открыть">
+                    <MenuItem.Icon>
+                        <Image Source="C:/Junkyard/Иконки/smth.png"/>
+                    </MenuItem.Icon>
                 </MenuItem>
                 <MenuItem Header="Сохранить" Icon=""/>
                 <MenuItem Header="Выход"/>
@@ -48,13 +45,10 @@
         </Menu>
         <!-- 6 -->
         <Menu Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="8" Background="Gray">
-            <MenuItem>
-                <MenuItem.Header>
-                    <StackPanel Orientation="Horizontal">
-                        <Image Source="C:/Junkyard/Иконки/play.png"/>
-                        <ContentPresenter Content="Запустить"/>
-                    </StackPanel>
-                </MenuItem.Header>
+            <MenuItem Header="Запустить">
+                <MenuItem.Icon>
+                    <Image Source="C:/Junkyard/Иконки/play.png"/>
+                </MenuItem.Icon>
             </MenuItem>
         </Menu>
         <!-- 8 -->
