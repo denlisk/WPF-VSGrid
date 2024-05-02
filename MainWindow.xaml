@@ -87,7 +87,7 @@
                     </Grid.ColumnDefinitions>
                     <!-- 1 -->
                     <Button Grid.Column="0" Background="Green">1</Button>
-                    <GridSplitter Grid.Column="1" Width="3" VerticalAlignment="Stretch" ShowsPreview="False"/>
+                    <GridSplitter Grid.Column="1" Width="3" ResizeBehavior="PreviousAndNext" VerticalAlignment="Stretch" ShowsPreview="False"/>
                     <!-- 2 -->
                     <Button Grid.Column="2" Background="SlateGray">2</Button>
                 </Grid>
