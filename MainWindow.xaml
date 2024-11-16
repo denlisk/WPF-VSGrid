@@ -34,7 +34,7 @@
                         <Image Source="C:/Junkyard/Иконки/smth.png"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Сохранить" Icon=""/>
+                <MenuItem Header="Сохранить"/>
                 <MenuItem Header="Выход"/>
             </MenuItem>
             <MenuItem Header="Правка">
